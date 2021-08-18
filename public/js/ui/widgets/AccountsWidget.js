@@ -14,7 +14,9 @@ class AccountsWidget {
    * необходимо выкинуть ошибку.
    * */
   constructor( element ) {
-
+    this.element = element;
+    this.registerEvents();
+    this.update();
   }
 
   /**
@@ -25,7 +27,19 @@ class AccountsWidget {
    * вызывает AccountsWidget.onSelectAccount()
    * */
   registerEvents() {
-
+    document.querySelector('.accounts-panel').addEventListener('click', (e) => {
+      if (e.target.classList.contains('create-account')) {
+        App.getModal('createAccount').open();
+      }
+      if (e.target.closest('.account')) {
+        [...document.querySelectorAll('.account')].forEach(element => {
+          element.classList.remove('active');
+         });
+         e.target.closest('.account').classList.add('active');
+      }
+      
+    
+    })
   }
 
   /**
@@ -39,6 +53,23 @@ class AccountsWidget {
    * метода renderItem()
    * */
   update() {
+    const user = User.current();
+    if (user != null) {
+      Account.list(user, (err, response) => {
+        console.log(err, response);
+          if (response.success) {
+            this.clear();
+            this.renderItem(response.data);
+         } 
+        else {
+          if (response.error) {
+            alert(response.error);
+          }
+        }
+      });
+
+      
+    }
 
   }
 
@@ -48,7 +79,9 @@ class AccountsWidget {
    * в боковой колонке
    * */
   clear() {
-
+    [...document.querySelectorAll('.account')].forEach(element => {
+      element.remove()
+    });
   }
 
   /**
@@ -68,7 +101,12 @@ class AccountsWidget {
    * item - объект с данными о счёте
    * */
   getAccountHTML(item){
-
+    return `<li class="account" data-id=${item.id}>
+              <a href="#">
+                <span>${item.name}</span> /
+                <span>${item.sum} ₽</span>
+              </a>
+            </li>`
   }
 
   /**
@@ -78,6 +116,8 @@ class AccountsWidget {
    * и добавляет его внутрь элемента виджета
    * */
   renderItem(data){
-
+    let str = '';
+    data.forEach(element => str += this.getAccountHTML(element));
+    document.querySelector('.accounts-panel').insertAdjacentHTML('beforeend', str);
   }
 }

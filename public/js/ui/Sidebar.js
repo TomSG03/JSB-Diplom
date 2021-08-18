@@ -32,18 +32,18 @@ class Sidebar {
    * выходу устанавливает App.setState( 'init' )
    * */
   static initAuthLinks(e) {
-    document.querySelector('.sidebar-menu').addEventListener('click', (e) => {
-      switch (e.target.textContent) {
-        case 'Вход': 
-          App.getModal('login').open();
-          break;
-        case 'Регистрация': 
-          App.getModal('register').open();
-          break;
-      
-        default:
-          break;
-      }
-    });
+    document.querySelector('.menu-item_login').addEventListener('click', () => {
+      App.getModal('login').open();
+    })
+    document.querySelector('.menu-item_register').addEventListener('click', () => {
+      App.getModal('register').open();
+    })
+    document.querySelector('.menu-item_logout').addEventListener('click', () => { 
+      User.logout((err, response) => { 
+        if (response.success) { 
+          App.setState('init') 
+        } 
+      }) 
+    })
   }
 }

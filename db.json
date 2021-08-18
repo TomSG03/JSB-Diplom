@@ -5,6 +5,18 @@
       "email": "demo@demo",
       "password": "demo",
       "id": "1"
+    },
+    {
+      "name": "Сергей Григорьевич Томилов",
+      "email": "tomexpert@yandex.ru",
+      "password": "1",
+      "id": "2d3mh2gksguh6pj"
+    },
+    {
+      "name": "Alex",
+      "email": "tomexpert@yandex",
+      "password": "1",
+      "id": "2d3mc44ksgupoec"
     }
   ],
   "accounts": [
@@ -22,6 +34,26 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "ВТБ",
+      "user_id": "2d3mc44ksgupoec",
+      "id": "2d3m9ogksh7fk08"
+    },
+    {
+      "name": "Байкал-Банк",
+      "user_id": "2d3mc44ksgupoec",
+      "id": "2d3m9gsksh7vvxg"
+    },
+    {
+      "name": "QiWi",
+      "user_id": "2d3mc44ksgupoec",
+      "id": "2d3m8ccksh7wu0t"
+    },
+    {
+      "name": "MasterCard",
+      "user_id": "2d3mc44ksgupoec",
+      "id": "2d3m36gksh7yybo"
     }
   ],
   "transactions": [
