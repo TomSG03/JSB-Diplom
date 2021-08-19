@@ -53,7 +53,7 @@ class AsyncForm {
   }
 
   onSubmit(options){
-    console.log(options);
+    
   }
 
   /**

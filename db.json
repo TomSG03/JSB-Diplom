@@ -54,6 +54,26 @@
       "name": "MasterCard",
       "user_id": "2d3mc44ksgupoec",
       "id": "2d3m36gksh7yybo"
+    },
+    {
+      "name": "ЗП",
+      "user_id": "2d3mc44ksgupoec",
+      "id": "2d3mb10kshk8yc8"
+    },
+    {
+      "name": "Сбер",
+      "user_id": "2d3mc44ksgupoec",
+      "id": "2d3m4coksi5s0c0"
+    },
+    {
+      "name": "Мили",
+      "user_id": "2d3mc44ksgupoec",
+      "id": "2d3mfvcksi67bvu"
+    },
+    {
+      "name": "Долг",
+      "user_id": "2d3mc44ksgupoec",
+      "id": "2d3m40gksiape2m"
     }
   ],
   "transactions": [
@@ -191,6 +211,42 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "2d3mh0gksidtdo2",
+      "type": "income",
+      "name": "Бонус",
+      "sum": 10000,
+      "account_id": "2d3m9ogksh7fk08",
+      "user_id": "2d3mc44ksgupoec",
+      "created_at": "2021-08-19T03:46:24.241Z"
+    },
+    {
+      "id": "2d3m28kksiedmek",
+      "type": "income",
+      "name": "Почистил ПК",
+      "sum": 1000,
+      "account_id": "2d3m36gksh7yybo",
+      "user_id": "2d3mc44ksgupoec",
+      "created_at": "2021-08-19T04:02:08.683Z"
+    },
+    {
+      "id": "2d3mdm8ksieec01",
+      "type": "income",
+      "name": "Премия",
+      "sum": 80000,
+      "account_id": "2d3mb10kshk8yc8",
+      "user_id": "2d3mc44ksgupoec",
+      "created_at": "2021-08-19T04:02:41.856Z"
+    },
+    {
+      "id": "2d3mfdkksiefsze",
+      "type": "expense",
+      "name": "Кроссовки",
+      "sum": 5000,
+      "account_id": "2d3m9ogksh7fk08",
+      "user_id": "2d3mc44ksgupoec",
+      "created_at": "2021-08-19T04:03:50.521Z"
     }
   ]
 }

@@ -13,7 +13,7 @@ class AccountsWidget {
    * Если переданный элемент не существует,
    * необходимо выкинуть ошибку.
    * */
-  constructor( element ) {
+  constructor(element) {
     this.element = element;
     this.registerEvents();
     this.update();
@@ -30,15 +30,9 @@ class AccountsWidget {
     document.querySelector('.accounts-panel').addEventListener('click', (e) => {
       if (e.target.classList.contains('create-account')) {
         App.getModal('createAccount').open();
+      } else {
+        this.onSelectAccount(e)
       }
-      if (e.target.closest('.account')) {
-        [...document.querySelectorAll('.account')].forEach(element => {
-          element.classList.remove('active');
-         });
-         e.target.closest('.account').classList.add('active');
-      }
-      
-    
     })
   }
 
@@ -56,7 +50,6 @@ class AccountsWidget {
     const user = User.current();
     if (user != null) {
       Account.list(user, (err, response) => {
-        console.log(err, response);
           if (response.success) {
             this.clear();
             this.renderItem(response.data);
@@ -67,10 +60,7 @@ class AccountsWidget {
           }
         }
       });
-
-      
     }
-
   }
 
   /**
@@ -92,7 +82,14 @@ class AccountsWidget {
    * Вызывает App.showPage( 'transactions', { account_id: id_счёта });
    * */
   onSelectAccount( element ) {
-
+    if (element.target.closest('.account')) {
+      const arr = [...document.querySelectorAll('.account')];
+      const index = arr.findIndex(element => element.classList.contains('active'));
+      if (index != -1) {
+        arr[index].classList.remove('active');
+      }
+      element.target.closest('.account').classList.add('active');
+    }
   }
 
   /**

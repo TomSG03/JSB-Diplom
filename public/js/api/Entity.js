@@ -11,14 +11,11 @@ class Entity {
   static URL= '';
   static list(data, callback){
     createRequest({
-      url: '/account',
+      url: this.URL,
       method: 'GET',
       responseType: 'json',
       data,
       callback: (err, response) => {
-        if (response && response.user) {
-          
-        }
         callback(err, response);
       }
     });
@@ -31,14 +28,11 @@ class Entity {
    * */
   static create(data, callback) {
     createRequest({
-      url: '/account',
+      url: this.URL,
       method: 'PUT',
       responseType: 'json',
       data,
       callback: (err, response) => {
-        if (response && response.user) {
-          
-        }
         callback(err, response);
       }
     });
@@ -49,6 +43,14 @@ class Entity {
    * (в зависимости от того, что наследуется от Entity)
    * */
   static remove(data, callback ) {
-
+    createRequest({
+      url: this.URL,
+      method: 'DELETE',
+      responseType: 'json',
+      data,
+      callback: (err, response) => {
+        callback(err, response);
+      }
+    });
   }
 }

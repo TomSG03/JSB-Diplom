@@ -5,6 +5,6 @@
  * */
 
 class Transaction extends Entity {
-  URL = '/transaction'
+  static URL = '/transaction'
 }
 

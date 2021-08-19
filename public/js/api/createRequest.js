@@ -25,7 +25,6 @@ const createRequest = (options = {}) => {
     const formData = new FormData();
     for (const key in options.data) {
       formData.append(key, options.data[key]);
-      console.log(formData);
     }
     try {
       xhr.open(options.method, options.url);
