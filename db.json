@@ -38,42 +38,12 @@
     {
       "name": "ВТБ",
       "user_id": "2d3mc44ksgupoec",
-      "id": "2d3m9ogksh7fk08"
-    },
-    {
-      "name": "Байкал-Банк",
-      "user_id": "2d3mc44ksgupoec",
-      "id": "2d3m9gsksh7vvxg"
-    },
-    {
-      "name": "QiWi",
-      "user_id": "2d3mc44ksgupoec",
-      "id": "2d3m8ccksh7wu0t"
-    },
-    {
-      "name": "MasterCard",
-      "user_id": "2d3mc44ksgupoec",
-      "id": "2d3m36gksh7yybo"
-    },
-    {
-      "name": "ЗП",
-      "user_id": "2d3mc44ksgupoec",
-      "id": "2d3mb10kshk8yc8"
+      "id": "2d3mem8ksjt9h3f"
     },
     {
       "name": "Сбер",
       "user_id": "2d3mc44ksgupoec",
-      "id": "2d3m4coksi5s0c0"
-    },
-    {
-      "name": "Мили",
-      "user_id": "2d3mc44ksgupoec",
-      "id": "2d3mfvcksi67bvu"
-    },
-    {
-      "name": "Долг",
-      "user_id": "2d3mc44ksgupoec",
-      "id": "2d3m40gksiape2m"
+      "id": "2d3m9rkksjvhkgb"
     }
   ],
   "transactions": [
@@ -213,40 +183,40 @@
       "user_id": "1"
     },
     {
-      "id": "2d3mh0gksidtdo2",
+      "id": "2d3mhhsksjt9vf8",
       "type": "income",
       "name": "Бонус",
-      "sum": 10000,
-      "account_id": "2d3m9ogksh7fk08",
+      "sum": 5000,
+      "account_id": "2d3mem8ksjt9h3f",
       "user_id": "2d3mc44ksgupoec",
-      "created_at": "2021-08-19T03:46:24.241Z"
+      "created_at": "2021-08-20T03:46:54.163Z"
     },
     {
-      "id": "2d3m28kksiedmek",
+      "id": "2d3mb4oksjvi0gx",
       "type": "income",
-      "name": "Почистил ПК",
-      "sum": 1000,
-      "account_id": "2d3m36gksh7yybo",
+      "name": "+",
+      "sum": 80000,
+      "account_id": "2d3m9rkksjvhkgb",
       "user_id": "2d3mc44ksgupoec",
-      "created_at": "2021-08-19T04:02:08.683Z"
+      "created_at": "2021-08-20T04:49:13.184Z"
     },
     {
-      "id": "2d3mdm8ksieec01",
+      "id": "2d3mhx0ksjvsn4l",
       "type": "income",
       "name": "Премия",
-      "sum": 80000,
-      "account_id": "2d3mb10kshk8yc8",
+      "sum": 5000,
+      "account_id": "2d3m9rkksjvhkgb",
       "user_id": "2d3mc44ksgupoec",
-      "created_at": "2021-08-19T04:02:41.856Z"
+      "created_at": "2021-08-20T04:57:29.108Z"
     },
     {
-      "id": "2d3mfdkksiefsze",
-      "type": "expense",
-      "name": "Кроссовки",
-      "sum": 5000,
-      "account_id": "2d3m9ogksh7fk08",
+      "id": "2d3mh44ksjx64jk",
+      "type": "income",
+      "name": "Бонус",
+      "sum": 25000,
+      "account_id": "2d3mem8ksjt9h3f",
       "user_id": "2d3mc44ksgupoec",
-      "created_at": "2021-08-19T04:03:50.521Z"
+      "created_at": "2021-08-20T05:35:57.823Z"
     }
   ]
 }

@@ -4,15 +4,19 @@
  * */
 const createRequest = (options = {}) => {
   const xhr = new XMLHttpRequest();
-  xhr.responseType = options.responseType;
+  let url = options.url;
+  xhr.responseType = 'json';
 
   if (options.method === 'GET') {
 
-    let url = options.url + '?';
-    for (const key in options.data) {
-      url += `${key}${options.data[key]}&`
+    if (Object.keys(options.data).length > 0) {
+      url += '?';
+      for (const key in options.data) {
+        url += `${key}=${options.data[key]}&`
+      }
+      url = url.slice(0, -1);
     }
-    url = url.slice(0, -1);
+
     try {
       xhr.open(options.method, url);
       xhr.send();
@@ -27,7 +31,7 @@ const createRequest = (options = {}) => {
       formData.append(key, options.data[key]);
     }
     try {
-      xhr.open(options.method, options.url);
+      xhr.open(options.method, url);
       xhr.send(formData);
     }
     catch (e) {

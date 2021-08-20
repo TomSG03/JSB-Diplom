@@ -89,6 +89,7 @@ class AccountsWidget {
         arr[index].classList.remove('active');
       }
       element.target.closest('.account').classList.add('active');
+      App.showPage( 'transactions', { 'account_id': element.target.closest('.account').dataset.id });
     }
   }
 

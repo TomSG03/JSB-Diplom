@@ -13,7 +13,6 @@ class Entity {
     createRequest({
       url: this.URL,
       method: 'GET',
-      responseType: 'json',
       data,
       callback: (err, response) => {
         callback(err, response);
@@ -30,7 +29,6 @@ class Entity {
     createRequest({
       url: this.URL,
       method: 'PUT',
-      responseType: 'json',
       data,
       callback: (err, response) => {
         callback(err, response);
@@ -46,7 +44,6 @@ class Entity {
     createRequest({
       url: this.URL,
       method: 'DELETE',
-      responseType: 'json',
       data,
       callback: (err, response) => {
         callback(err, response);

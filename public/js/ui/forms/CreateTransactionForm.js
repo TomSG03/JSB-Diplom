@@ -9,6 +9,7 @@ class CreateTransactionForm extends AsyncForm {
    * */
   constructor(element) {
     super(element)
+    this.renderAccountsList();
   }
 
   /**
@@ -20,7 +21,11 @@ class CreateTransactionForm extends AsyncForm {
     if (user != null) {
       const select = Account.list(user, (err, response) => {
         if (response.success) {
-          response.data.forEach(item => {this.element.querySelector('.accounts-select').insertAdjacentHTML('beforeend', `<option value="${item.id}">${item.name}</option>`)})
+          const accountList = this.element.querySelector('.accounts-select');
+          accountList.innerText='';
+          response.data.forEach(item => {
+            accountList.insertAdjacentHTML('beforeend', `<option value="${item.id}">${item.name}</option>`)
+          })
         }
         else {
           if (response.error) {

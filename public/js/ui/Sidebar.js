@@ -42,6 +42,8 @@ class Sidebar {
       User.logout((err, response) => { 
         if (response.success) { 
           App.setState('init') 
+          User.unsetCurrent();
+          //TransactionsPage.lastOptions = null;
         } 
       }) 
     })
