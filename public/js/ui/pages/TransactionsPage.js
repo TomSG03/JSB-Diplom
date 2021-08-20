@@ -47,7 +47,6 @@ class TransactionsPage {
     document.querySelector('.content').addEventListener('click', (e) => {
       const del = e.target.closest('.transaction__remove');
       if (del != null) {
-        console.log(del.dataset.id)
         ths.removeTransaction(del.dataset.id);
       }
     });
@@ -66,15 +65,14 @@ class TransactionsPage {
    * для обновления приложения
    * */
   removeAccount() {
-    const ths = this;
     if (this.lastOptions != null) {
       if (confirm("Вы действительно хотите удалить эту транзакцию??")) {
         Account.remove({id:this.lastOptions.account_id}, (err, response) => {
           if (response.success) {
-            App.updateWidgets();
-            ths.clear();
+            App.update();
           }
         });
+        this.clear();
       }
     }
   }  
@@ -85,7 +83,6 @@ class TransactionsPage {
    * либо обновляйте текущую страницу (метод update) и виджет со счетами
    * */
   removeTransaction(id) {
-    const ths = this;
     if (this.lastOptions != null) {
       if (confirm("Вы действительно хотите удалить счёт?")) {
         Transaction.remove({id:id}, (err, response) => {
